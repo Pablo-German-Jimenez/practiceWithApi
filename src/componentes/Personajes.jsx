@@ -1,17 +1,26 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import Card from "react-bootstrap/Card";
+import "../index.css";
+import { Button } from "react-bootstrap"
 
 function Personajes() {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+    <Card style={{ width: "18rem" }}>
+      <Card.Header className="text-center">GOKU</Card.Header>
+      <Card.Img
+        className="card-img"
+        variant="top"
+        src="https://dragonball-api.com/characters/goku_normal.webp"
+      />
+      <Card.Body className="text-center ">
+        <Card.Title>Descripcion</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          <ul className="list-unstyled">
+            <li>Raza: Saiyan</li>
+            <li>Ki: 60.000.000</li>
+            <li>Crew:Quilombero</li>
+          </ul>
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="danger" >Obtener personaje</Button>
       </Card.Body>
     </Card>
   );
