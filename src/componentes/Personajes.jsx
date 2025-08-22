@@ -34,20 +34,20 @@ function Personajes() {
     }
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Header className="text-center">GOKU</Card.Header>
+      <Card.Header datoPersonaje={datoPersonaje} className="text-center">{datoPersonaje.name}</Card.Header>
       <Card.Img
         className="card-img"
         variant="top"
-        src="https://dragonball-api.com/characters/goku_normal.webp"
+        src={datoPersonaje.image}
       />
       <Card.Body className="text-center ">
         <Card.Title>Descripcion</Card.Title>
         <ul className="list-unstyled">
-          <li>Raza: Saiyan</li>
-          <li>Ki: 60.000.000</li>
-          <li>Crew:Quilombero</li>
+          <li>Raza: {datoPersonaje.race}</li>
+          <li>Ki: {datoPersonaje.ki}</li>
+          <li>Crew: {datoPersonaje.affiliation}</li>
         </ul>
-        <Button variant="danger">Obtener personaje</Button>
+        <Button variant="danger" onClick={consultaApi} >Obtener personaje</Button>
       </Card.Body>
     </Card>
   );
