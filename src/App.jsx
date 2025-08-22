@@ -1,3 +1,4 @@
+import Personajes from "./componentes/Personajes"
 
 function App() {
 
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
    Hola mundillo
+   <Personajes></Personajes>
     </>
   )
 }
